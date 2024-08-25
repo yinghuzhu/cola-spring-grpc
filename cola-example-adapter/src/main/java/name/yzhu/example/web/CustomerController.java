@@ -38,7 +38,7 @@ public class CustomerController {
     @Autowired
     private UserMapper userMapper;
     @GetMapping(value = "/get")
-    public Response getCustomer(@RequestParam(name = "id", required = false) Integer id){
+    public Response getCustomer(@RequestParam(name = "id", required = false) Long id){
         User user = userMapper.selectByPrimaryKey(id);
         return SingleResponse.of(user);
     }

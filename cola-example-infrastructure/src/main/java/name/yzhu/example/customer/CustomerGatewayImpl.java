@@ -17,7 +17,7 @@ public class CustomerGatewayImpl implements CustomerGateway {
 
     public Customer getByById(String customerId){
       CustomerDO customerDO = customerMapper.getById(customerId);
-        User user = userMapper.selectByPrimaryKey(Integer.valueOf(customerId));
+        User user = userMapper.selectByPrimaryKey(Long.valueOf(customerId));
         Customer customer = new Customer();
         customer.setCustomerId(String.valueOf(user.getId()));
       return null;
