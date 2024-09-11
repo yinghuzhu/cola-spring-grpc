@@ -34,6 +34,7 @@
         <module>cola-example-domain</module>
         <module>cola-example-infrastructure</module>
         <module>start</module>
+        <module>mybatis-generator-plugs</module>
     </modules>
 
     <dependencies>

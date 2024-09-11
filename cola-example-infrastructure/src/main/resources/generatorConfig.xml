@@ -6,10 +6,13 @@
 <generatorConfiguration>
     <context id="PostgreSQLContext" targetRuntime="MyBatis3">
 
+        <property name="overwrite" value="true"/>
+
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
         <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
         <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
         <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+        <plugin type="ColumnAnnotationPlugin" />
 
         <jdbcConnection driverClass="org.postgresql.Driver"
                         connectionURL="jdbc:postgresql://localhost:5432/yhzhu"
